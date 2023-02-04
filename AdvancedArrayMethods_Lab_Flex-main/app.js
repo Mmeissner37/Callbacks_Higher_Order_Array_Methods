@@ -144,10 +144,9 @@ console.log("Vegetarian Foods: ", veggyFood);
 
 function findItalianFood() {
   let results = dishes.filter(function (el) {
-    if (el.cuisine === "Italian" & el.servings === i) {
-      for (int i = 0, i > 5, i++);
-    
-      return true;
+    if (el.cuisine === "Italian") 
+    if (el.servings > 5) {
+    return true;
     } else {
       return false;
     }
