@@ -155,7 +155,7 @@ function findItalianFood() {
 }
 
 let italianFood = findItalianFood();
-console.log("Italian Foods: ", italianFood)
+console.log("Italian Foods with serving size greater than 5: ", italianFood)
 
 //3. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
@@ -196,7 +196,7 @@ console.log("Dishes with even servings: ", evenServings)
 
 function findTomatoCheese() {
   let results = dishes.filter(function (el) {
-    if (el.ingredients === "tomato" & "cheese") {
+    if (el.ingredients === "tomato, cheese") {
       return true;
     } else {
       return false;
@@ -210,6 +210,14 @@ console.log("Dishes with tomato and cheese: ", tomatoCheese)
 
 //6. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
+
+let cuisineTypes = dishes.map(function(el) {
+  return el.cuisine;
+})
+
+console.log(cuisineTypes)
+
+
 
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
