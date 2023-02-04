@@ -160,8 +160,36 @@ console.log("Italian Foods: ", italianFood)
 //3. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function findEvenNumberToServing() {
+  let results = dishes.filter(function(el) {
+    if (el.id === el.servings) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return results;
+}
+
+let idToServings = findEvenNumberToServing();
+console.log("Dishes whose ID Number matches Serving Count: ", idToServings)
+
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
+
+function findEvenServings() {
+  let results = dishes.filter(function(el) {
+    if (el.servings % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return results;
+}
+
+let evenServings = findEvenServings();
+console.log("Dishes with even servings: ", evenServings)
 
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
