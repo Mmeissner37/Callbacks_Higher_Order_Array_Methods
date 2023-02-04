@@ -144,7 +144,9 @@ console.log("Vegetarian Foods: ", veggyFood);
 
 function findItalianFood() {
   let results = dishes.filter(function (el) {
-    if (el.cuisine === "Italian") {
+    if (el.cuisine === "Italian" & el.servings === i) {
+      for (int i = 0, i > 5, i++);
+    
       return true;
     } else {
       return false;
@@ -164,6 +166,20 @@ console.log("Italian Foods: ", italianFood)
 
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
+
+function findTomatoCheese() {
+  let results = dishes.filter(function (el) {
+    if (el.ingredients === "tomato" & "cheese") {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return results;
+}
+
+let tomatoCheese = findTomatoCheese();
+console.log("Dishes with tomato and cheese: ", tomatoCheese)
 
 //6. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
