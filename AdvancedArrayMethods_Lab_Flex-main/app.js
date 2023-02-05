@@ -226,14 +226,16 @@ console.log("Cuisine Types: ",cuisineTypes)
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
 
-function nameChangeCuisine(){
-  let results = dishes.splice(1, cuiseineType) {
-    return results;
-  };
-}
+let nameChange = dishes.reverse(
+  function(el) {
+    results = dishes.cuisine + dishes.name
+      return results;
+  }
+) 
 
-nameChange = nameChangeCuisine
-console.log("Here are all the dishes: ", nameChangeCuisine)
+
+console.log("Here is the dish's new name: ", nameChange)
+
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. 
 //This function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
