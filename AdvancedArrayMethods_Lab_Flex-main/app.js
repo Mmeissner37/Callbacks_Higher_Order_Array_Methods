@@ -196,10 +196,10 @@ console.log("Dishes with even servings: ", evenServings)
 
 function findTomatoCheese() {
   let results = dishes.filter(function (el) {
-    if (el.ingredients === "tomato, cheese") {
+    if (el.ingredients.includes("tomato") & (el.ingredients.includes("cheese"))) {
       return true;
     } else {
-      return false;
+      return false; 
     }
   });
   return results;
@@ -211,16 +211,29 @@ console.log("Dishes with tomato and cheese: ", tomatoCheese)
 //6. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 
-let cuisineTypes = dishes.map(function(el) {
+function cuisineTypeMap() {
+  return cuisineTypes;
+}
+
+let cuisineTypes = dishes.map(
+  function(el) {
   return el.cuisine;
-})
+});
 
-console.log(cuisineTypes)
-
+console.log("Cuisine Types: ",cuisineTypes)
 
 
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
+
+function nameChangeCuisine(){
+  let results = dishes.splice(1, cuiseineType) {
+    return results;
+  };
+}
+
+nameChange = nameChangeCuisine
+console.log("Here are all the dishes: ", nameChangeCuisine)
 
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. 
 //This function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
@@ -230,6 +243,21 @@ console.log(cuisineTypes)
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not need to check the array's indexes to find out what the array INCLUDES.
 //Filter
+
+function chickIngredient() {
+  let results = dishes.filter(function(el) {
+    if (el.ingredients.includes("chickpea")) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return results
+}
+
+let chickpea = chickIngredient();
+console.log("Dishes with Chickpeas: ", chickpea)
+
 
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
