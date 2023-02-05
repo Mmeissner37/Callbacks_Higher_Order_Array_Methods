@@ -226,12 +226,11 @@ console.log("Cuisine Types: ",cuisineTypes)
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
 
-let nameChange = dishes.reverse(
+let nameChange = dishes.map( 
   function(el) {
-    results = dishes.cuisine + dishes.name
-      return results;
+    return el.cuisine + el.name;
   }
-) 
+)
 
 
 console.log("Here is the dish's new name: ", nameChange)
